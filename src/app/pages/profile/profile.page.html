@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Details</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-label>Gender</ion-label>
+      <ion-item>
+      <ion-radio-group value="male">
+        <ion-radio value="male" labelPlacement="start" alignment="end">Male</ion-radio><br/>
+        <ion-radio value="female" labelPlacement="start">Female</ion-radio>
+      </ion-radio-group>
+      </ion-item>
+      <ion-item>
+        <ion-select label="Dietary preferences" placeholder="Dietary preference">
+          <ion-select-option value="veg">Vegetarian</ion-select-option>
+          <ion-select-option value="vegan">Vegan</ion-select-option>
+          <ion-select-option value="pesc">Pescatarian</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-toggle>I would like to receive promotion emails</ion-toggle>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>My code</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <app-generate-code></app-generate-code>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

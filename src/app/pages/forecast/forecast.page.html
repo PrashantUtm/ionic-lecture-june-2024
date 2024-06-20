@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Forecast</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let forecast of forecasts">
+    <ion-card-header>
+      <ion-card-title>{{ forecast.location }}</ion-card-title>
+      <ion-card-subtitle>{{ forecast.date | date: 'fullDate' }}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      {{ forecast.name }}
+      <div *ngIf="forecast.rainfall">
+        Rainfall {{ forecast.rainfall }} mm
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
