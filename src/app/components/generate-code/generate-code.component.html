@@ -1,4 +1,4 @@
 <ion-label>{{ code }}</ion-label>
 <div>
-  <ion-button (click)="generateCode()">Generate</ion-button>
+  <ion-button (click)="generateButtonClicked()" [disabled]="!isButtonEnabled">{{ buttonLabel }}</ion-button>
 </div>
